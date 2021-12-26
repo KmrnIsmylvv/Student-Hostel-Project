@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2415C7DC-A512-41ED-BEB5-33533B344DC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Telebe_Yataqxanasi</RootNamespace>
+    <AssemblyName>Telebe Yataqxanasi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAdminGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminGiris.Designer.cs">
+      <DependentUpon>frmAdminGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaSehife.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaSehife.Designer.cs">
+      <DependentUpon>frmAnaSehife.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFakulteler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFakulteler.Designer.cs">
+      <DependentUpon>frmFakulteler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIsciler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIsciler.Designer.cs">
+      <DependentUpon>frmIsciler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOdemeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOdemeler.Designer.cs">
+      <DependentUpon>frmOdemeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQazancStatistikasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQazancStatistikasi.Designer.cs">
+      <DependentUpon>frmQazancStatistikasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminGuncelle.Designer.cs">
+      <DependentUpon>frmAdminGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelebeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelebeEdit.Designer.cs">
+      <DependentUpon>frmTelebeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelebeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelebeList.Designer.cs">
+      <DependentUpon>frmTelebeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTelebeQeydiyyat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTelebeQeydiyyat.Designer.cs">
+      <DependentUpon>frmTelebeQeydiyyat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXercEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXercEdit.Designer.cs">
+      <DependentUpon>frmXercEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXercler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXercler.Designer.cs">
+      <DependentUpon>frmXercler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXerclerListi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXerclerListi.Designer.cs">
+      <DependentUpon>frmXerclerListi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLbaglantim.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TelebeYataqxanasiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelebeYataqxanasiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TelebeYataqxanasiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelebeYataqxanasiDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TelebeYataqxanasiDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelebeYataqxanasiDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TelebeYataqxanasiDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelebeYataqxanasiDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TelebeYataqxanasiDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelebeYataqxanasiDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TelebeYataqxanasiDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelebeYataqxanasiDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TelebeYataqxanasiDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TelebeYataqxanasiDataSet6.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAdminGiris.resx">
+      <DependentUpon>frmAdminGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaSehife.resx">
+      <DependentUpon>frmAnaSehife.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFakulteler.resx">
+      <DependentUpon>frmFakulteler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIsciler.resx">
+      <DependentUpon>frmIsciler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOdemeler.resx">
+      <DependentUpon>frmOdemeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQazancStatistikasi.resx">
+      <DependentUpon>frmQazancStatistikasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminGuncelle.resx">
+      <DependentUpon>frmAdminGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelebeEdit.resx">
+      <DependentUpon>frmTelebeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelebeList.resx">
+      <DependentUpon>frmTelebeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelebeQeydiyyat.az-Latn.resx">
+      <DependentUpon>frmTelebeQeydiyyat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTelebeQeydiyyat.resx">
+      <DependentUpon>frmTelebeQeydiyyat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXercEdit.resx">
+      <DependentUpon>frmXercEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXercler.resx">
+      <DependentUpon>frmXercler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXerclerListi.resx">
+      <DependentUpon>frmXerclerListi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TelebeYataqxanasiDataSet.xsc">
+      <DependentUpon>TelebeYataqxanasiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TelebeYataqxanasiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet.xss">
+      <DependentUpon>TelebeYataqxanasiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet1.xsc">
+      <DependentUpon>TelebeYataqxanasiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TelebeYataqxanasiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet1.xss">
+      <DependentUpon>TelebeYataqxanasiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet2.xsc">
+      <DependentUpon>TelebeYataqxanasiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TelebeYataqxanasiDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet2.xss">
+      <DependentUpon>TelebeYataqxanasiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet3.xsc">
+      <DependentUpon>TelebeYataqxanasiDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TelebeYataqxanasiDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet3.xss">
+      <DependentUpon>TelebeYataqxanasiDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet4.xsc">
+      <DependentUpon>TelebeYataqxanasiDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TelebeYataqxanasiDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet4.xss">
+      <DependentUpon>TelebeYataqxanasiDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet5.xsc">
+      <DependentUpon>TelebeYataqxanasiDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TelebeYataqxanasiDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet5.xss">
+      <DependentUpon>TelebeYataqxanasiDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet6.xsc">
+      <DependentUpon>TelebeYataqxanasiDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TelebeYataqxanasiDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TelebeYataqxanasiDataSet6.xss">
+      <DependentUpon>TelebeYataqxanasiDataSet6.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
